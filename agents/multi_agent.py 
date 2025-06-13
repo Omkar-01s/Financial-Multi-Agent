@@ -1,0 +1,18 @@
+from langchain_community.chat_models import ChatGroq 
+from langchain.agents import initialize_agent
+
+from agents.web_search_agent import web_search_tool
+from agents.finance_agent import finance_tool
+
+llm = ChatGroq(
+    model="mixtral-8x7b-32768",  
+    temperature=0,
+    max_tokens=1024
+)
+
+multi_agent = initialize_agent(
+    tools=[web_search_tool, finance_tool],
+    llm=llm,
+    agent="zero-shot-react-description",
+    verbose=True
+)

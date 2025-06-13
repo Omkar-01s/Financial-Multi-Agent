@@ -1,0 +1,9 @@
+streamlit
+streamlit_chat
+langgraph
+langchain
+openai
+duckduckgo-search
+yfinance
+plotly
+python-dotenv
