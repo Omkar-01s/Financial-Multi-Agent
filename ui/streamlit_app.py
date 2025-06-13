@@ -1,5 +1,5 @@
 import streamlit as st
-from agents.langgraph_multiagent import multi_agent
+from agents.multi_agent import multi_agent
 from services.plot_utils import plot_stock_price
 from streamlit_chat import message as chat_message
 
